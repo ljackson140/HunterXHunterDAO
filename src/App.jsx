@@ -28,6 +28,12 @@ const App = () => {
   const [isClaiming, setIsClaiming] = useState(false);
 
   useEffect(() => {
+    // We pass the signer to the sdk, which enables us to interact with
+    // our deployed contract!
+    sdk.setProviderOrSigner(signer);
+  }, [signer]);
+
+  useEffect(() => {
     // If they don't have an connected wallet, exit!
     if (!address) {
       return;
