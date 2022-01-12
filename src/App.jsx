@@ -103,7 +103,7 @@ const App = () => {
       });
   }, [hasClaimedNFT]);
 
-// We also need to check if the user already voted.
+  // We also need to check if the user already voted.
   useEffect(() => {
     if (!hasClaimedNFT) {
       return;
@@ -176,16 +176,16 @@ const App = () => {
   }, [address]);
 
   if (error instanceof UnsupportedChainIdError ) {
-  return (
-    <div className="unsupported-network">
-      <h2>Please connect to Rinkeby</h2>
-      <p>
-        This dapp only works on the Rinkeby network, please switch networks
-        in your connected wallet.
-      </p>
-    </div>
-  );
-}
+    return (
+      <div className="unsupported-network">
+        <h2>Please connect to Rinkeby</h2>
+        <p>
+          This dapp only works on the Rinkeby network, please switch networks
+          in your connected wallet.
+        </p>
+      </div>
+    );
+  }
 
   const mintNft = () => {
     setIsClaiming(true);

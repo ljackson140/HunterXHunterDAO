@@ -4,7 +4,7 @@ body {
   font-family: Inter, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-image: url("/src/cosmo.png");
+  background-image: url("/src/cosmo.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   color: #fff;
@@ -13,7 +13,9 @@ body {
 #root {
   min-height: 100vh;
   display: flex;
+  flex-direction: column;
 }
+
 
 h1 {
   font-size: 5rem;
